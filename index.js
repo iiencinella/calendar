@@ -227,8 +227,9 @@
       el.parentNode.appendChild(details);
     }
 
+    const church = document.getElementById('churchs').value;
     var todaysEvents = this.events.reduce(function (memo, ev) {
-      if (ev.date.isSame(day, "day")) {
+      if (ev.church === church && ev.date.isSame(day, "day") && ev.date.isSame(day, "month")) {
         memo.push(ev);
       }
       return memo;
@@ -259,7 +260,7 @@
 
     if (!events.length) {
       var div = createElement("div", "event empty");
-      var span = createElement("span", "", "No Events");
+      var span = createElement("span", "", "No hay eventos programados");
 
       div.appendChild(span);
       wrapper.appendChild(div);
@@ -404,6 +405,31 @@
     { eventName: "Misa a Sagrado Corazón de Jesús y bendición con reliquias de San Peregrino - Todas las misas del día", calendar: "Misa y bendición con reliquias", color: "green", day: "09/01/2023", church: 'Santo Domingo Savio' },
     { eventName: "Misa a Sagrado Corazón de Jesús y bendición con reliquias de San Peregrino - Todas las misas del día", calendar: "Misa y bendición con reliquias", color: "green", day: "10/06/2023", church: 'Santo Domingo Savio' },
     { eventName: "Misa a Sagrado Corazón de Jesús y bendición con reliquias de San Peregrino - Todas las misas del día", calendar: "Misa y bendición con reliquias", color: "green", day: "12/01/2023", church: 'Santo Domingo Savio' },
+    // Parroquia Santa Lucía
+    { eventName: "Misa por los abuelos - 16hs", calendar: "Misa", color: "orange", day: "07/26/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "07/23/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "07/30/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "08/06/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "08/13/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "08/20/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "08/27/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "09/03/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "09/10/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "09/17/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "09/24/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "10/01/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "10/08/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "10/15/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "10/22/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "10/29/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "11/05/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "11/12/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "11/19/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "11/26/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "12/03/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "12/10/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "12/17/2023", church: 'Santa Lucía' },
+    { eventName: "Misa - 10:30hs", calendar: "Misa", color: "orange", day: "12/24/2023", church: 'Santa Lucía' },
   ];
 
   const church = [
@@ -425,7 +451,7 @@
     // { name: 'San José Obrero' },
     // { name: 'San Francisco de Borja' },
     // { name: 'San Benito Abad' },
-    // { name: 'Santa Lucía' },
+    { name: 'Santa Lucía' },
     // { name: 'Jesucristo Maestro y Señor de la Humanidad y Nuestra Señora del Rosario de Pompeya' },
     { name: 'Santo Domingo Savio' },
     // { name: 'Nuestra Señora del Rosario de Pompeya' },
