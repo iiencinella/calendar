@@ -18,13 +18,17 @@ body {
  user-select: none;
 }
 
+footer {
+  text-align: center;
+}
+
 .calendar {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   width: 420px;
   margin: 0 auto;
-  height: 770px;
+  height: 620px;
   overflow: hidden;
 }
 
