@@ -8,7 +8,7 @@ body {
  font-weight: 100;
  color: rgba(255, 255, 255, 1);
  margin: 0;
- padding: 10px;
+ padding: 0;
  background: #4A4A4A;
  -webkit-touch-callout: none;
  -webkit-user-select: none;
@@ -30,6 +30,26 @@ footer {
   margin: 0 auto;
   height: 620px;
   overflow: hidden;
+}
+
+.headerTitle {
+  height: 120px;
+  width: 420px;
+  background: rgba(66, 66, 66, 1);
+  text-align: center;
+  position:relative;
+  z-index: 100;
+}
+
+.headerTitle h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headerTitle p {
+  margin-top: 2px;
+  margin-bottom: 2px;
+
 }
 
 .header {
